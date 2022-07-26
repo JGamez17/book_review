@@ -1,20 +1,18 @@
-import React from "react";
-import ReactDOM from "react-Ddom";
-import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
+import React from 'react';
+import ReactDOM from "react-dom";
+import { createStore, applyMiddleware } from 'redux'
 import { Provider } from "react-redux";
-import thunk from "react-redux"
+import { rootReducer } from './reducers/rootReducer'
+import thunk from "redux-thunk"
+import { composeWithDevTools } from 'redux-devtools-extension'
+import App from './components/App'
 
 
 
 const store = createStore(
-    rootReducer, composeEnhancers(applyMiddleware(thunk, logger))
+    rootReducer, composeWithDevTools(applyMiddleware(thunk))
 );
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
-// const rootReducer = combineReducers({
-//     books: bookReducer,
-// });
 ReactDOM.render(
     <Provider store={store}>
         <App />
