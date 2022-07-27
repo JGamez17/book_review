@@ -1,6 +1,6 @@
 import React from 'react';
 import Books from './Books';
-import { BrowserRouter } from "react-router-dom";
+// import { BrowserRouter } from "react-router-dom";
 // import { booksReducer } from '../reducers/booksReducer';
 
 
@@ -13,7 +13,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Books />
-        <BrowserRouter>
+        {/* <BrowserRouter>
           <Navbar />
           <Switch>
             <Route exact path="/" component={Home}></Route>
@@ -21,7 +21,7 @@ class App extends React.Component {
             <Route path="/about" component={About}></Route>
             <Route path="/add_book" component={CreateBook}></Route>
           </Switch>
-        </BrowserRouter>
+        </BrowserRouter> */}
       </div>
     );
   }
