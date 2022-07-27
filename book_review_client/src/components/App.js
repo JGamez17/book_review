@@ -1,4 +1,6 @@
 import React from 'react';
+import Books from './Books';
+import { BrowserRouter } from "react-router-dom";
 // import { booksReducer } from '../reducers/booksReducer';
 
 
@@ -10,8 +12,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <books />
-        {/* <Router>
+        <Books />
+        <BrowserRouter>
           <Navbar />
           <Switch>
             <Route exact path="/" component={Home}></Route>
@@ -19,7 +21,7 @@ class App extends React.Component {
             <Route path="/about" component={About}></Route>
             <Route path="/add_book" component={CreateBook}></Route>
           </Switch>
-        </Router> */}
+        </BrowserRouter>
       </div>
     );
   }

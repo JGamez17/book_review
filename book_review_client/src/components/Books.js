@@ -1,16 +1,22 @@
 import React, { Component } from "react";
-
-// import { connect } from "react-redux";
+import { getBooks } from ',/actions/fetchBooks'
+import { connect } from "react-redux";
 
 class Books extends React.Component {
+    componentDidMount() {
+        this.props.getBooks();
+    }
     render() {
-        <div className="books">
-            {/* {this.props.books.map((book) => {
+        return (
+            <div>
+                {/* {this.props.books.map((book) => {
                 return <BookCard key={book.id} bookobj={book} />
             })} */}
             BOOKS LISTED HERE
-        </div>
+            </div>
+        )
     }
 }
 
 export default Books;
+// export default connect(null, { getBooks })(Books);

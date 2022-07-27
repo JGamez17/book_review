@@ -7,3 +7,5 @@ function getBooks() {
                 dispatch({ type: "GET_BOOKS", payload: books });
             });
 };
+
+export { getBooks }

@@ -1,5 +1,12 @@
 import React, { Component } from "react";
 import { MenuItems } from "./MenuItems";
+import {
+    BrowserRouter,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom"
+
 import "./NavBar.css";
 
 class NavBar extends Component {
@@ -12,7 +19,7 @@ class NavBar extends Component {
     render() {
         return (
             <nav className="NavbarItems" >
-                <div calssName="menu-icon" onClick={this.handleClick}>
+                <div className="menu-icon" onClick={this.handleClick}>
                     <i
                         className={this.stateclicked ? "nav-menu active" : "nav-menu"}>
                     </i>
@@ -22,7 +29,7 @@ class NavBar extends Component {
                         return (
                             <li key={index}>
                                 <a className={item.Name} href={item.url}>
-                                    {item.titel}
+                                    {item.title}
                                 </a>
                             </li>
                         );
