@@ -9,7 +9,7 @@ function getBooks() {
 };
 
 
-function addBooks(books) {
+function addBook(book) {
     return (dispatch) => {
         fetch("http://localhost:3001/books", {
             method: "POST",
@@ -17,8 +17,8 @@ function addBooks(books) {
                 "Content-type": "application/json",
                 accept: "application/json",
             },
-            body: JSON.stringify(books),
+            body: JSON.stringify(book),
         })
     }
 }
-export { getBooks, addBooks }
+export { getBooks, addBook }

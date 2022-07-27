@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-
+import { connect } from "react-redux";
+import { addBook } from '../actions/fetchBooks'
 
 
 class AddBook extends Component {
@@ -14,6 +15,8 @@ class AddBook extends Component {
             [e.target.name]: e.target.value,
         });
     }
+
+
 
     render() {
         return (
@@ -50,5 +53,5 @@ class AddBook extends Component {
 
 
 
-export default AddBook;
+export default connect(null, { addBook })(AddBook);
 
